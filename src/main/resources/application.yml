@@ -1,0 +1,23 @@
+spring:
+  application:
+    name : api-batch
+  main:
+    web-application-type: none
+
+# ==== 배치 실행 주기 ====
+batch:
+  cron: "0 * * * * *" # 1분마다 (매 분 0초)
+
+# ==== OpenWeather 설정 ====
+app:
+  openweather:
+    base-url: https://api.openweathermap.org/data/2.5
+    api-key:
+    city: Seoul
+    units: metric
+    lang: kr
+
+    # ==== 파일 저장 설정 ====
+  storage:
+    base-dir: D:/api-batch/data/openweather
+    file-name: bigData.json
